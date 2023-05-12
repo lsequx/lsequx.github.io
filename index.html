@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>H5 Security | Cincinnati 2</title>
+    <link rel="shortcut icon" href="https://h5datacenters.com/android-icon-192x192.png" type="image/x-icon">
+    <link rel="stylesheet" href="main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/998241e7ce.js" crossorigin="anonymous"></script>
+    <script src="main.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <h1 id="title"><span id="h5">H5</span>DATACENTERS</h1>
+        <div id="contacts">
+            <span class="contact">
+                <h3 class="contact-name">Walter Stietzel</h3>
+                <h6 class="contact-number">(513) 869-0520</h6>
+            </span>
+            <span class="contact">
+                <h3 class="contact-name">Brandon Maley</h3>
+                <h6 class="contact-number">(513) 967-3812</h6>
+            </span>
+        </div>
+    </header>
+
+    <div id="CheckInContainer">
+        <input type="text" name="checkin-name" id="checkInName" autocomplete="off" autofocus placeholder="Enter Name">
+        <button id="checkInButton" type="button">Check In</button>
+    </div>
+    <main id="main">
+        <div id="welcome-container">
+            <h2 id="welcome-message">welcome message goes here</h2>
+        </div>
+        <div id="checklistContainer">
+            <form action="#cheklist" id="checklistForm">
+                <div class="checklist-item">
+                    <span class="item-row">
+                    <label for="checkbox">Lobby</label>
+                        <span class="duo-selection">
+                            <input type="checkbox" class="checkbox" name="checkbox" value="lobby"/>
+                            <button type="button" class="detailsButton"><i class="fa-solid fa-pencil"></i></button>
+                        </span>
+                    </span>
+                    <textarea value="lobby" class="detailsBox"></textarea>
+                </div>
+                <div class="checklist-item">
+                    <span class="item-row">
+                    <label for="checkbox">Office</label>
+                        <span class="duo-selection">
+                            <input type="checkbox" class="checkbox" name="checkbox" value="office"/>
+                            <button type="button" class="detailsButton"><i class="fa-solid fa-pencil"></i></button>
+                        </span>
+                    </span>
+                    <textarea value="office" class="detailsBox"></textarea>
+                </div>
+                <div class="checklist-item">
+                    <span class="item-row">
+                    <label for="checkbox">Chiller Plant</label>
+                        <span class="duo-selection">
+                            <input type="checkbox" class="checkbox" name="checkbox" value="chiller-plant"/>
+                            <button type="button" class="detailsButton"><i class="fa-solid fa-pencil"></i></button>
+                        </span>
+                    </span>
+                    <textarea value="chiller-plant" class="detailsBox"></textarea>
+                </div>
+                <div class="checklist-item">
+                    <span class="item-row">
+                    <label for="checkbox">Gen 1<sup>st</sup> Floor</label>
+                        <span class="duo-selection">
+                            <input type="checkbox" class="checkbox" name="checkbox" value="gen-1st-floor"/>
+                            <button type="button" class="detailsButton"><i class="fa-solid fa-pencil"></i></button>
+                        </span>
+                    </span>
+                    <textarea value="gen-1st-floor" class="detailsBox"></textarea>
+                </div>
+                <div class="checklist-item">
+                    <span class="item-row">
+                    <label for="checkbox">Gen 2<sup>nd</sup> Floor</label>
+                        <span class="duo-selection">
+                            <input type="checkbox" class="checkbox" name="checkbox" value="gen-2nd-floor"/>
+                            <button type="button" class="detailsButton"><i class="fa-solid fa-pencil"></i></button>
+                        </span>
+                    </span>
+                    <textarea value="gen-2nd-floor" class="detailsBox"></textarea>
+                </div>
+                <button id="submitChecklistButton">Submit Checklist</button>
+            </form>
+        </div>
+    </main>
+    
+</body>
+</html>
