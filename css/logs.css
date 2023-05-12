@@ -11,110 +11,55 @@ body {
     justify-content: center;
     align-items: center;
 }
-#log-table {
-    width:50%;
-    overflow: scroll;
-    padding:1rem;
-    border-collapse: collapse;
-    text-align: center;
-    margin-top: 1rem;
-}
-#log-table tr th {
-    color:white;
-    font-size: 24px;
-    padding:1rem;
-    background-color: green;
-}
-#log-table tr th:not(:last-of-type), tr td {
-    border-right: 2px solid rgb(243, 237, 237);
-}
-tr:first-of-type {
-    border-bottom: 5px solid gray;
-}
-tr:nth-child(even) {
-    background-color: white;
-    color:#3fae48;
-}
-tr:nth-child(odd) {
-    background-color: lightgray;
-    color:green;
-}
-tr:hover {
-    background-color: gray;
-    color:white;
-}
-#log-table tr td {
-    padding:0.5rem;
-    transition: background-color 0.5s ease;
-    font-size: 17px;
-}
-.view-checklist-link {
-    text-decoration:none;
-    color:dodgerblue;
-    font-weight: 700;
-}
-.disabled-link {
-    color:tomato;
-    text-decoration: none;
-    font-weight: 400;
-}
-
-#search-container {
+#container {
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
+    padding:1rem;
     margin-top: 1rem;
+    gap: 4.25rem;
 }
 #searchInput {
-    width:350px;
-    height: 65px;
-    padding:1rem;
-    font-size: 24px;
-    font-weight: 500;
+    width:300px;
+    padding:0.5rem;
+    height:45px;
     border:none;
-    border-top-left-radius: 11px;
-    border-bottom-left-radius: 11px;
+    border-radius: 5px;
+    font-size: 17px;
+    font-weight: 600;
     color:#3fae48;
     outline: none;
 }
-#searchButton {
-    width:65px;
-    height:65px;
-    border:none;
-    border-top-right-radius: 11px;
-    border-bottom-right-radius: 11px;
-    font-size: 24px;
-    color: gray;
-    transition: background-color 0.5s ease, color 0.3s ease;
-}
-#searchButton:hover {
-    background-color: darkslategray;
-    color: white;
-}
-#more-actions-container {
-    margin-top: 1rem;
+#actions-container {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
-    width:25%;
+    gap: 2rem;
+    height: 45px;
 }
-#more-actions-container a {
+#actions-container a {
     text-decoration: none;
-    font-size: 20px;
     font-weight: 800;
     letter-spacing: 0.5px;
-}
-#more-actions-container a:first-child {
-    color: lightgray;
-    transition: color 0.3s ease;
-}
-#more-actions-container a:first-child:hover {
-    color: white;
-}
-#more-actions-container a:last-child {
-    color:white;
-    transition: color 0.3s ease;
-}
-#more-actions-container a:last-child:hover {
+    font-size: 20px;
     color:lightgray;
+    display: flex;
+    gap: 0.5rem;
+    transition: color 0.3s ease;
+}
+#actions-container a:hover {
+    color:white;
+}
+.fa-download {
+    transition: color 0.3s ease;
+}
+#actions-container a:hover .fas{
+    color:green;
+    animation: hoverEffect 0.4s linear;
+}
+@keyframes hoverEffect {
+    0%{transform: translateY(0)}
+    50%{transform: translateY(-7px)}
+    100%{transform: translateY(3px)}
 }

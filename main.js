@@ -37,7 +37,7 @@ $(function() {
                 'width':'250px'
             })
             $('#CheckInContainer').css({
-                'margin-top':'17rem',
+                'margin-top':'7rem',
 
             });
             console.log(logObj);
