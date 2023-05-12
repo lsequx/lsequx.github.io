@@ -14,6 +14,10 @@ $(function() {
                 'pointer-events':'none',
                 'width':'25px'
             })
+            $('#CheckInContainer').css({
+                'margin-top':'3rem',
+
+            })
             localStorage.setItem('name',name);
             localStorage.setItem('start time', `${now.getHours()}:${now.getMinutes()}${now.getHours() - 24 === 12 ? 'PM' : 'AM'}`);
         } else {
@@ -25,6 +29,10 @@ $(function() {
                 'pointer-events':'all',
                 'width':'250px'
             })
+            $('#CheckInContainer').css({
+                'margin-top':'17rem',
+
+            });
         }
 
 
@@ -61,10 +69,15 @@ $('#submitChecklistButton').on('click', function(e){
         console.log(checkedItems);
         localStorage.setItem('checked items',checkedItems);
         localStorage.setItem('end time', `${endTime.getHours()}:${endTime.getMinutes()}${endTime.getHours() - 24 === 12 ? 'PM' : 'AM'}`);
-        alert('Checklist completed. Check out to complete process.')
     } else {
         console.log(checkedItems)
-        alert('please complete checklist to submit')
+        alert('Check all boxes to complete checklist');
+    }
+
+    if (confirm('Are you sure you want to continue?') === true) {
+        $('#checklistForm').trigger('reset');
+    } else {
+        e.preventDefault();
     }
 })
 
