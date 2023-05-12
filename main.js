@@ -26,7 +26,7 @@ $(function() {
 
             })
             logObj['name'] = name;
-            logObj['startTime'] = `${now.getHours()}:${now.getMinutes()}${now.getHours() - 24 === 12 ? 'PM' : 'AM'}`;
+            logObj['startTime'] = `${now.getHours()}:${now.getMinutes()}${now.getHours() - 24 > 12 ? 'PM' : 'AM'}`;
         } else {
             $('#welcome-container').slideUp();
             $('#checklistContainer').slideUp();
@@ -73,16 +73,18 @@ checkboxes.forEach(function (checkbox) {
 $('#submitChecklistButton').on('click', function(e){
     e.preventDefault();
     var endTime = new Date();
+    var currentTime = `${endTime.getHours()}:${endTime.getMinutes()}${endTime.getHours() - 24 > 12 ? 'PM' : 'AM'}`;
     if(checkedItems.length === $('.checkbox').length) {
-        logObj['endTime'] = `${endTime.getHours()}:${endTime.getMinutes()}${endTime.getHours() - 24 === 12 ? 'PM' : 'AM'}`;
+        logObj['endTime'] = currentTime;
         logObj['checklistSubmitted'] = checkedItems.length === $('.checkbox').length;
     } else {
         console.log(checkedItems)
         if(confirm('Checklist not completed and will not be saved.') === true) {
-            location.reload();
+            // location.reload();
+            logObj['endTime'] = currentTime;
+            logObj['checklistSubmitted'] = checkedItems.length === $('.checkbox').length;
         }
     }
-
     console.log(logObj);
 ;})
 

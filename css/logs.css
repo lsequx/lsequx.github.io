@@ -58,9 +58,6 @@ tr:hover {
     text-decoration: none;
     font-weight: 400;
 }
-.fa-arrow-up-right-from-square {
-    font-size: 11px;
-}
 
 #search-container {
     display: flex;
