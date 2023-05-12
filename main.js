@@ -15,7 +15,7 @@ $(function() {
                 'width':'25px'
             })
             localStorage.setItem('name',name);
-            localStorage.setItem('start', `${now.getHours()}:${now.getMinutes()}${now.getHours() - 24 === 12 ? 'PM' : 'AM'}`);
+            localStorage.setItem('start time', `${now.getHours()}:${now.getMinutes()}${now.getHours() - 24 === 12 ? 'PM' : 'AM'}`);
         } else {
             $('#welcome-container').slideUp();
             $('#checklistContainer').slideUp();
@@ -48,16 +48,22 @@ checkboxes.forEach(function (checkbox) {
       label.style.textDecoration = 'none';
       label.style.color = 'gray';
       button.style.pointerEvents = 'all';
+      checkedItems.pop(this.value);
     }
 
   });
 });
 
 $('#submitChecklistButton').on('click', function(e){
+    e.preventDefault();
+    var endTime = new Date();
     if(checkedItems.length === $('.checkbox').length) {
         console.log(checkedItems);
         localStorage.setItem('checked items',checkedItems);
+        localStorage.setItem('end time', `${endTime.getHours()}:${endTime.getMinutes()}${endTime.getHours() - 24 === 12 ? 'PM' : 'AM'}`);
+        location.reload();
     } else {
+        console.log(checkedItems)
         alert('please complete checklist to submit')
     }
 })
