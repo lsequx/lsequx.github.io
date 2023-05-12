@@ -61,7 +61,7 @@ $('#submitChecklistButton').on('click', function(e){
         console.log(checkedItems);
         localStorage.setItem('checked items',checkedItems);
         localStorage.setItem('end time', `${endTime.getHours()}:${endTime.getMinutes()}${endTime.getHours() - 24 === 12 ? 'PM' : 'AM'}`);
-        location.reload();
+        alert('Checklist completed. Check out to complete process.')
     } else {
         console.log(checkedItems)
         alert('please complete checklist to submit')

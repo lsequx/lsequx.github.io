@@ -54,21 +54,6 @@ header {
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
 }
-.contact {
-    text-align:left;
-}
-.contact-name {
-    font-size: 24px;
-    font-weight: 400;
-    font-style: italic;
-}
-.contact-number {
-    color: lightgray;
-    opacity: 0.7;
-    letter-spacing: 1px;
-    font-size: 14px;
-    font-weight: 800;
-}
 #CheckInContainer {
     display: flex;
     justify-content: center;
@@ -210,4 +195,32 @@ header {
 #submitChecklistButton:hover{
     background-color: #3fae48;
     border:none;
+}
+
+
+footer {
+    width:100%;
+    position: fixed;
+    bottom: 0;
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #3fae48;
+    padding:0.5rem;
+}
+.contact {
+    text-align:left;
+}
+.contact-name {
+    font-size: 24px;
+    font-weight: 600;
+    font-style: italic;
+    color:white;
+}
+.contact-number {
+    color: blue;
+    opacity: 0.7;
+    letter-spacing: 1px;
+    font-size: 14px;
+    font-weight: 800;
 }
