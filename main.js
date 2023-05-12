@@ -1,4 +1,11 @@
 $(function() {
+    var logObj = {
+        'name':'name',
+        'startTime':'00:00AM/PM',
+        'endTime':'00:00AM/PM',
+        'checklistSubmitted':false
+    }
+
     var now = new Date();
     $('#checkInButton').click(function(){
         var name = $("#checkInName").val();
@@ -18,8 +25,8 @@ $(function() {
                 'margin-top':'3rem',
 
             })
-            localStorage.setItem('name',name);
-            localStorage.setItem('start time', `${now.getHours()}:${now.getMinutes()}${now.getHours() - 24 === 12 ? 'PM' : 'AM'}`);
+            logObj['name'] = name;
+            logObj['startTime'] = `${now.getHours()}:${now.getMinutes()}${now.getHours() - 24 === 12 ? 'PM' : 'AM'}`;
         } else {
             $('#welcome-container').slideUp();
             $('#checklistContainer').slideUp();
@@ -33,6 +40,7 @@ $(function() {
                 'margin-top':'17rem',
 
             });
+            console.log(logObj);
         }
 
 
@@ -66,20 +74,17 @@ $('#submitChecklistButton').on('click', function(e){
     e.preventDefault();
     var endTime = new Date();
     if(checkedItems.length === $('.checkbox').length) {
-        console.log(checkedItems);
-        localStorage.setItem('checked items',checkedItems);
-        localStorage.setItem('end time', `${endTime.getHours()}:${endTime.getMinutes()}${endTime.getHours() - 24 === 12 ? 'PM' : 'AM'}`);
+        logObj['endTime'] = `${endTime.getHours()}:${endTime.getMinutes()}${endTime.getHours() - 24 === 12 ? 'PM' : 'AM'}`;
+        logObj['checklistSubmitted'] = checkedItems.length === $('.checkbox').length;
     } else {
         console.log(checkedItems)
-        alert('Check all boxes to complete checklist');
+        if(confirm('Checklist not completed and will not be saved.') === true) {
+            location.reload();
+        }
     }
 
-    if (confirm('Are you sure you want to continue?') === true) {
-        $('#checklistForm').trigger('reset');
-    } else {
-        e.preventDefault();
-    }
-})
+    console.log(logObj);
+;})
 
 $('.detailsButton').click(function(){
     var button = $(this);
@@ -93,4 +98,9 @@ $('.detailsButton').click(function(){
     var textarea = parentDiv.find('.detailsBox');
     textarea.slideToggle();
 })
-})
+
+console.log(logObj);
+
+
+
+}); // end of jquery
