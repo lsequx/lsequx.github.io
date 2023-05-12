@@ -17,14 +17,10 @@ $(function() {
             $('#checkInButton').text('Check Out')
             $('#checkInName').val('');
             $('#checkInName').css({
-                'filter':'blur(1px)',
                 'pointer-events':'none',
                 'width':'25px'
             })
-            $('#CheckInContainer').css({
-                'margin-top':'3rem',
-
-            })
+            $('#checkInButton').css.toggle();
             logObj['name'] = name;
             logObj['startTime'] = `${now.getHours()}:${now.getMinutes()}${now.getHours() - 24 > 12 ? 'PM' : 'AM'}`;
         } else {
@@ -32,14 +28,9 @@ $(function() {
             $('#checklistContainer').slideUp();
             $('#checkInButton').text('Check In')
             $('#checkInName').css({
-                'filter':'none',
                 'pointer-events':'all',
                 'width':'250px'
             })
-            $('#CheckInContainer').css({
-                'margin-top':'7rem',
-
-            });
             console.log(logObj);
         }
 

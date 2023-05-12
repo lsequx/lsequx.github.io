@@ -5,7 +5,11 @@
     font-family: 'Roboto',Arial,sans-serif;
 }
 body {
-    background-color: #3fae48;
+    /* background-color: #3fae48; */
+    background-image:linear-gradient(to bottom left, white, #3fae48);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -43,19 +47,18 @@ body {
     font-weight: 800;
     letter-spacing: 0.5px;
     font-size: 20px;
-    color:lightgray;
+    color:#3fae48;
     display: flex;
     gap: 0.5rem;
     transition: color 0.3s ease;
 }
 #actions-container a:hover {
-    color:white;
+    color:green;
 }
 .fa-download {
     transition: color 0.3s ease;
 }
 #actions-container a:hover .fas{
-    color:green;
     animation: hoverEffect 0.4s linear;
 }
 @keyframes hoverEffect {
