@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/index.css">
     <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+    <script src="js/main.js" defer></script>
 </head>
 <body>
     
@@ -23,89 +24,91 @@
 
     <main>
         <div id="checkInContainer">
-            <div id="error"><p></p></div>
+            <div id="error"><p>error message</p></div>
             <form action="#checkinFormSubmit" method="get" id="checkInForm">
                 <input type="text" name="checkInName" id="nameInput" placeholder="Enter name" autofocus autocomplete="off">
                 <button id="checkInBtn" type="submit">Check In</button>
             </form>
         </div>
-        <div id="welcomeContainer">
-            <h2 id="startTime">12:11PM</h2>
-            <h2 id="welcomeText">$user started check</h2>
-        </div>
-        <div id="checklistContainer">
-            <form action="#checklistFormSubmit" method="get" id="checklistForm">
-                <div class="checklistItem">
-                    <span class="item-row">
-                        <label for="checkbox">Area name</label>
-                        <span class="item-actions">
-                            <input type="checkbox" class="checkbox" value="area-name">
-                            <button type="button" class="detailsBtn"><i class="fa-solid fa-pen"></i></button>
+        <div id="mainContainer">
+            <div id="welcomeContainer">
+                <h2 id="startTime"></h2>
+                <h2 id="welcomeText"></h2>
+            </div>
+            <div id="checklistContainer">
+                <form action="#checklistFormSubmit" method="get" id="checklistForm">
+                    <div class="checklistItem">
+                        <span class="item-row">
+                            <label for="checkbox">Area name</label>
+                            <span class="item-actions">
+                                <input type="checkbox" class="checkbox" value="area-name">
+                                <button type="button" class="detailsBtn"><i class="fa-solid fa-pen"></i></button>
+                            </span>
                         </span>
-                    </span>
-                    <textarea value="checkbox-value" class="detailsTextbox"></textarea>
-                </div>
-                <div class="checklistItem">
-                    <span class="item-row">
-                        <label for="checkbox">Area name</label>
-                        <span class="item-actions">
-                            <input type="checkbox" class="checkbox" value="area-name">
-                            <button type="button" class="detailsBtn"><i class="fa-solid fa-pen"></i></button>
+                        <textarea value="checkbox-value" class="detailsTextbox"></textarea>
+                    </div>
+                    <div class="checklistItem">
+                        <span class="item-row">
+                            <label for="checkbox">Area name</label>
+                            <span class="item-actions">
+                                <input type="checkbox" class="checkbox" value="area-name">
+                                <button type="button" class="detailsBtn"><i class="fa-solid fa-pen"></i></button>
+                            </span>
                         </span>
-                    </span>
-                    <textarea value="checkbox-value" class="detailsTextbox"></textarea>
-                </div>
-                <div class="checklistItem">
-                    <span class="item-row">
-                        <label for="checkbox">Area name</label>
-                        <span class="item-actions">
-                            <input type="checkbox" class="checkbox" value="area-name">
-                            <button type="button" class="detailsBtn"><i class="fa-solid fa-pen"></i></button>
+                        <textarea value="checkbox-value" class="detailsTextbox"></textarea>
+                    </div>
+                    <div class="checklistItem">
+                        <span class="item-row">
+                            <label for="checkbox">Area name</label>
+                            <span class="item-actions">
+                                <input type="checkbox" class="checkbox" value="area-name">
+                                <button type="button" class="detailsBtn"><i class="fa-solid fa-pen"></i></button>
+                            </span>
                         </span>
-                    </span>
-                    <textarea value="checkbox-value" class="detailsTextbox"></textarea>
-                </div>
-                <div class="checklistItem">
-                    <span class="item-row">
-                        <label for="checkbox">Area name</label>
-                        <span class="item-actions">
-                            <input type="checkbox" class="checkbox" value="area-name">
-                            <button type="button" class="detailsBtn"><i class="fa-solid fa-pen"></i></button>
+                        <textarea value="checkbox-value" class="detailsTextbox"></textarea>
+                    </div>
+                    <div class="checklistItem">
+                        <span class="item-row">
+                            <label for="checkbox">Area name</label>
+                            <span class="item-actions">
+                                <input type="checkbox" class="checkbox" value="area-name">
+                                <button type="button" class="detailsBtn"><i class="fa-solid fa-pen"></i></button>
+                            </span>
                         </span>
-                    </span>
-                    <textarea value="checkbox-value" class="detailsTextbox"></textarea>
-                </div>
-                <div class="checklistItem">
-                    <span class="item-row">
-                        <label for="checkbox">Area name</label>
-                        <span class="item-actions">
-                            <input type="checkbox" class="checkbox" value="area-name">
-                            <button type="button" class="detailsBtn"><i class="fa-solid fa-pen"></i></button>
+                        <textarea value="checkbox-value" class="detailsTextbox"></textarea>
+                    </div>
+                    <div class="checklistItem">
+                        <span class="item-row">
+                            <label for="checkbox">Area name</label>
+                            <span class="item-actions">
+                                <input type="checkbox" class="checkbox" value="area-name">
+                                <button type="button" class="detailsBtn"><i class="fa-solid fa-pen"></i></button>
+                            </span>
                         </span>
-                    </span>
-                    <textarea value="checkbox-value" class="detailsTextbox"></textarea>
-                </div>
-                <div class="checklistItem">
-                    <span class="item-row">
-                        <label for="checkbox">Area name</label>
-                        <span class="item-actions">
-                            <input type="checkbox" class="checkbox" value="area-name">
-                            <button type="button" class="detailsBtn"><i class="fa-solid fa-pen"></i></button>
+                        <textarea value="checkbox-value" class="detailsTextbox"></textarea>
+                    </div>
+                    <div class="checklistItem">
+                        <span class="item-row">
+                            <label for="checkbox">Area name</label>
+                            <span class="item-actions">
+                                <input type="checkbox" class="checkbox" value="area-name">
+                                <button type="button" class="detailsBtn"><i class="fa-solid fa-pen"></i></button>
+                            </span>
                         </span>
-                    </span>
-                    <textarea value="checkbox-value" class="detailsTextbox"></textarea>
-                </div>
-                <div class="checklistItem">
-                    <span class="item-row">
-                        <label for="checkbox">Area name</label>
-                        <span class="item-actions">
-                            <input type="checkbox" class="checkbox" value="area-name">
-                            <button type="button" class="detailsBtn"><i class="fa-solid fa-pen"></i></button>
+                        <textarea value="checkbox-value" class="detailsTextbox"></textarea>
+                    </div>
+                    <div class="checklistItem">
+                        <span class="item-row">
+                            <label for="checkbox">Area name</label>
+                            <span class="item-actions">
+                                <input type="checkbox" class="checkbox" value="area-name">
+                                <button type="button" class="detailsBtn"><i class="fa-solid fa-pen"></i></button>
+                            </span>
                         </span>
-                    </span>
-                    <textarea value="checkbox-value" class="detailsTextbox"></textarea>
-                </div>
-            </form>
+                        <textarea value="checkbox-value" class="detailsTextbox"></textarea>
+                    </div>
+                </form>
+            </div>
         </div>
     </main>
     
@@ -113,11 +116,11 @@
     <footer>
         <span class="contact">
             <h3 class="contact-name">Walter Stietzel</h3>
-            <h5 class="contact-number">(555) 555 5555</h5>
+            <h5 class="contact-number">(513) 869 0520</h5>
         </span>
         <span class="contact">
             <h3 class="contact-name">Brandon Maley</h3>
-            <h5 class="contact-number">(555) 555 5555</h5>
+            <h5 class="contact-number">(513) 967 3812</h5>
         </span>
         <a href="#view-log-link">View Logs <i class="fa-solid fa-clipboard"></i></a>
     </footer>
