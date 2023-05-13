@@ -46,8 +46,7 @@ main {
 }
 #checkInForm {
     display: flex;
-    gap:0.07rem;
-    box-shadow: 0 5px 11px darkslategray;
+    gap:0.5rem;
     border-radius: 11px;
 }
 #nameInput {

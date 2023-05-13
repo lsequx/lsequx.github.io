@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activiy Log</title>
+    <link rel="shortcut icon" href="https://h5datacenters.com/android-icon-192x192.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/log.css">
+    <script src="https://kit.fontawesome.com/998241e7ce.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+    <script src="../js/main.js" defer></script>
+    <script src="../js/filter.js" defer></script>
+</head>
+<body>
+
+    <div id="tableContainer">
+        <table id="table-logs">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Name</th>
+                    <th>Start</th>
+                    <th>End</th>
+                    <th>Checklist</th>
+                </tr>
+            </thead>
+            <tbody id="table-data">
+                <tr>
+                    <td>1/20/23</td>
+                    <td>Walter</td>
+                    <td>1:14PM</td>
+                    <td>2:10PM</td>
+                    <td><a href="#" class="checklistViewLink">View</a></td>
+                </tr>
+                <tr>
+                    <td>1/22/23</td>
+                    <td>Mark Jones</td>
+                    <td>2:14PM</td>
+                    <td>5:10PM</td>
+                    <td><a href="#" class="checklistViewLink">View</a></td>
+                </tr>
+                <tr>
+                    <td>1/22/23</td>
+                    <td>Fisher </td>
+                    <td>1:14PM</td>
+                    <td>2:10PM</td>
+                    <td><a href="#" class="checklistViewLink">View</a></td>
+                </tr>
+                <tr>
+                    <td>1/24/23</td>
+                    <td>Brandon</td>
+                    <td>1:14PM</td>
+                    <td>2:10PM</td>
+                    <td><a href="#" class="checklistViewLink disabled">NONE</a></td>
+                </tr>
+                <tr>
+                    <td>1/25/23</td>
+                    <td>Walter</td>
+                    <td>1:14PM</td>
+                    <td>2:10PM</td>
+                    <td><a href="#" class="checklistViewLink">View</a></td>
+                </tr>
+                <tr>
+                    <td>1/28/23</td>
+                    <td>Walter</td>
+                    <td>1:14PM</td>
+                    <td>2:10PM</td>
+                    <td><a href="#" class="checklistViewLink">View</a></td>
+                </tr>
+                <tr>
+                    <td>2/01/23</td>
+                    <td>Ben</td>
+                    <td>1:14PM</td>
+                    <td>2:10PM</td>
+                    <td><a href="#" class="checklistViewLink disabled">NONE</a></td>
+                </tr>
+                <tr>
+                    <td>2/01/23</td>
+                    <td>Ben</td>
+                    <td>1:14PM</td>
+                    <td>2:10PM</td>
+                    <td><a href="#" class="checklistViewLink disabled">NONE</a></td>
+                </tr>
+                <tr>
+                    <td>1/20/23</td>
+                    <td>Walter</td>
+                    <td>1:14PM</td>
+                    <td>2:10PM</td>
+                    <td><a href="#" class="checklistViewLink">View</a></td>
+                </tr>
+                <tr>
+                    <td>1/20/23</td>
+                    <td>Mark Jones</td>
+                    <td>1:14PM</td>
+                    <td>2:10PM</td>
+                    <td><a href="#" class="checklistViewLink">View</a></td>
+                </tr>
+                <tr>
+                    <td>1/20/23</td>
+                    <td>Brandon</td>
+                    <td>1:14PM</td>
+                    <td>2:10PM</td>
+                    <td><a href="#" class="checklistViewLink disabled">NONE</a></td>
+                </tr>
+                <tr>
+                    <td>1/20/23</td>
+                    <td>Walter</td>
+                    <td>1:14PM</td>
+                    <td>2:10PM</td>
+                    <td><a href="#" class="checklistViewLink disabled">NONE</a></td>
+                </tr>
+                <tr>
+                    <td>1/20/23</td>
+                    <td>Walter</td>
+                    <td>1:14PM</td>
+                    <td>2:10PM</td>
+                    <td><a href="#" class="checklistViewLink disabled">NONE</a></td>
+                </tr>
+                <tr>
+                    <td>1/20/23</td>
+                    <td>Walter</td>
+                    <td>1:14PM</td>
+                    <td>2:10PM</td>
+                    <td><a href="#" class="checklistViewLink disabled">NONE</a></td>
+                </tr>
+                <tr>
+                    <td>1/20/23</td>
+                    <td>Walter</td>
+                    <td>1:14PM</td>
+                    <td>2:10PM</td>
+                    <td><a href="#" class="checklistViewLink">View</a></td>
+                </tr>
+                <tr>
+                    <td>1/20/23</td>
+                    <td>Walter</td>
+                    <td>1:14PM</td>
+                    <td>2:10PM</td>
+                    <td><a href="#" class="checklistViewLink disabled">NONE</a></td>
+                </tr>
+                <tr>
+                    <td>1/20/23</td>
+                    <td>Walter</td>
+                    <td>1:14PM</td>
+                    <td>2:10PM</td>
+                    <td><a href="#" class="checklistViewLink disabled">NONE</a></td>
+                </tr>
+                <tr>
+                    <td>1/20/23</td>
+                    <td>Walter</td>
+                    <td>1:14PM</td>
+                    <td>2:10PM</td>
+                    <td><a href="#" class="checklistViewLink">View</a></td>
+                </tr>
+                <tr>
+                    <td>1/20/23</td>
+                    <td>Walter</td>
+                    <td>1:14PM</td>
+                    <td>2:10PM</td>
+                    <td><a href="#" class="checklistViewLink disabled">NONE</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div id="mainContainer">
+        <input type="text" id="searchInput" placeholder="Filter Table" autofocus autocomplete="off" />
+        <div id="user-actions">
+            <a href="#download-table">Export Table</a>
+            <a href="../index.html">Home</a>
+        </div>
+    </div>
+    
+</body>
+</html>

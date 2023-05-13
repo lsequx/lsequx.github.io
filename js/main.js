@@ -11,7 +11,7 @@ $(function() {
         }
         var name = $('#nameInput').val();
         var welcomeText = $('#welcomeText');
-        var startTime = $('#startTime');
+        var startTimeText = $('#startTime');
         var errorMessage = $('#error p');
         var checklist = $('#mainContainer');
         var checkedIn = false;
@@ -29,10 +29,6 @@ $(function() {
         else {
             checkedIn = true;
             errorMessage.hide();
-            logData.name = name;
-            var now = new Date().toLocaleTimeString();
-            startTime.text(now);
-            welcomeText.text(`${name} started check`);
         }
 
         if(checkedIn) {
@@ -42,6 +38,11 @@ $(function() {
                 'pointer-events':'none',
                 'filter':'blur(0.1rem)'
             })
+            var startTime = new Date().toLocaleTimeString();
+            startTimeText.text(startTime);
+            welcomeText.text(`${name} started check`);
+            localStorage.setItem('name',name);
+            localStorage.setItem('startTime',startTime);
         } else {
             $('#checkInBtn').text('Check In')
             $('#nameInput').val('')
@@ -50,10 +51,19 @@ $(function() {
                 'pointer-events':'all',
                 'filter':'blur(0)'
             })
+            var endTime = new Date().toLocaleTimeString();
+            localStorage.setItem('endTime',endTime);
+            logData.name = localStorage.getItem('name');
+            logData.startTime = localStorage.getItem('startTime');
+            logData.endTime = localStorage.getItem('endTime');
         }
 
         console.log(name)
         console.log(checkedIn)
+        console.log(logData);
 
     })
+
+    // checklist 
+    
 })
