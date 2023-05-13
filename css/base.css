@@ -1,0 +1,15 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Roboto',Arial,sans-serif;
+}
+body {
+    background-image: linear-gradient(45deg, #3fae48,seagreen,#3fae48);
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
