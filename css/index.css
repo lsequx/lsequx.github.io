@@ -1,228 +1,184 @@
-/*header*/
-header {
-    text-align: center;
-    padding:1rem;
-    position: absolute;
-    top: 0;
-}
-#title {
-    font-size: 5rem;
-    font-weight: 800;
-    color: white;
-    text-shadow: 0 5px 7px darkgreen;
-}
-#h5 {
-    color: #3fae48;
-    font-weight: 500;
-}
-
-/* main */
-/* main * {border:1px solid red;} */
 main {
-    width:100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width:100%;
 }
 #checkInContainer {
-    width:100%;
-    height:80px;
+    width:700px;
+    height:11rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-bottom: 2rem;
+    padding:1rem;
+    background-image:linear-gradient(150deg, #3fae48, #157145);
+    box-shadow: inset 0 0 11px black;
+    border-radius: 17px;
+    gap:0.5rem;
 }
 #error {
-    width:500px;
-    text-align: left;
-    margin-bottom: 0.5rem;
-}
-#error p {
-    color:maroon;
+    color:white;
+    opacity: 0.9;
     font-weight: 600;
-    display: none;
+    letter-spacing: 1px;
+    width:65%;
+    padding-left: 0.5rem;
 }
-#checkInForm {
+#checkin {
     display: flex;
-    gap:0.5rem;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 5px black;
     border-radius: 11px;
 }
 #nameInput {
-    width:325px;
-    height: 75px;
-    padding:11px;
-    font-size: 20px;
-    color:#3fae48;
-    border:none;
-    border-radius: 7px;
+    width:300px;
+    height: 65px;
+    padding: 7px;
+    font-size: 22px;
+    border:1px solid #ddd;
+    border-top-left-radius: 11px;
+    border-bottom-left-radius: 11px;
     outline: none;
-    transition: filter 0.5s ease;
+    color:#157145;
+    transition: width 0.5s ease;
 }
 #checkInBtn {
-    width:175px;
-    height: 75px;
+    width: 150px;
+    height: 65px;
     border:none;
-    border-radius: 7px;
+    border-top-right-radius: 11px;
+    border-bottom-right-radius: 11px;
+    background-color:#157145;
+    color:white;
     font-size: 24px;
     font-weight: 600;
-    color:darkgreen;
-    background-color: white;
-    transition: color 0.3s ease,background-image 0.5s linear,transform 0.5s ease;
+    transition: background-color 0.3s ease, width 0.5s ease;
 }
 #checkInBtn:hover {
-    background-image: linear-gradient(90deg, #3fae48, green);
-    color: white;
-    transform: scale(1.05);
-}
-#mainContainer {
-    display: none;
-}
-/* welcome message styles */
-#welcomeContainer {
-    width:500px;
-    text-align: center;
-    background-color: white;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    gap:1rem;
-    padding:0.5rem;
-    border-top-left-radius: 11px;
-    border-top-right-radius: 11px;
-    box-shadow: 0 -5px 11px darkslategray;
-}
-#startTime {
-    font-weight: 800;
-    color:green;
-}
-#welcomeText {
-    color:darkslategray;
-    font-weight: 400;
-    font-size: 20px;
-    text-transform: capitalize;
+    background-color: #3fae48;
 }
 
-
- /* checklist styles */
- #checklistContainer {
+#checklistContainer {
     width:100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 0.25rem;
- }
- #checklistForm {
-    background-color: white;
-    border-bottom-left-radius: 11px;
-    border-bottom-right-radius: 11px;
-    height:300px;
-    overflow: scroll;
-    scroll-behavior: smooth;
-    box-shadow: 0 7px 11px darkslategray;
- }
- #checklistForm::-webkit-scrollbar {
-    display: none;
- }
- .checklistItem {
-    width:500px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
- }
- .item-row {
-    width:100%;
+}
+#messageContainer{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid lightgray;
-    padding:12px;
- }
- .item-row label {
-    font-size: 20px;
-    font-weight: bold;
-    color:gray;
-    letter-spacing: 0.5px;
- }
- .item-actions {
-    display: flex;
-    flex-direction: row;
+    width:700px;
+    padding:1rem;
+    background-color: #3fae48;
+    border-top-right-radius: 17px;
+    border-top-left-radius: 17px;
+    border-bottom: 5px solid white;
+}
+#time {
+    color:lightgray;
+}
+#checklist-title {
+    color:white;
+    opacity: 0.7;
+    text-transform: capitalize;
+}
+#checklistForm {
+    background-color: white;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
- }
- .checkbox,.detailsBtn {
+    width:700px;
+    max-height: 450px;
+    overflow-y: scroll;
+}
+#checklistForm::-webkit-scrollbar {
+    display: none;
+}
+.item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    padding:0.5rem;
+}
+.item:nth-child(even){
+    background-color: rgba(128, 128, 128, 0.137);
+}
+.item:nth-child(odd){
+    background-color: rgba(211, 211, 211, 0.603);
+}
+.label-input{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width:100%;
+}
+.label-input label.strikethrough {
+    color:red;
+    text-decoration: line-through;
+    transition: color 0.5s ease,text-decoration 0.5s ease;
+}
+.label-input label {
+    font-size: 27px;
+    font-weight: 500;
+    color:#3fae48;
+}
+.user-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:0.5rem;
+}
+.checkbox,.detailsBtn {
     width:35px;
     height:35px;
-    border:none;
- }
- .detailsBtn {
+}
+.detailsBtn {
+    font-size: 20px;
+    color:gray;
     background-color: transparent;
-    font-size: 17px;
-    color:green;
- }
- .detailsTextbox {
+    border:none;
+    border-radius: 50%;
+    transition: opacity 0.3s ease;
+    opacity: 0.7;
+}
+.detailsBtn:hover {
+    opacity: 1;
+}
+.detailsBox {
     width:100%;
     height:75px;
     margin-top: 0.25rem;
     border:1px solid #ddd;
+    border-radius: 7px;
     resize: none;
-    border-radius: 5px;
-    padding:7px;
+    padding:5px;
+    color:gray;
     outline: none;
     display: none;
- }
-
-
-
-
-
-/*footer*/
-footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap:5rem;
-    padding:2rem;
-    background-color: #3fae48;
 }
-footer .contact-name {
-    color:white;
-    font-size: 20px;
+#submitChecklistBtn {
+    width:100%;
+    border:none;
+    background-color: #157145;
+    font-size: 35px;
+    height:75px;
+    color:lightgray;
     font-weight: 600;
     letter-spacing: 1px;
+    border-bottom-left-radius: 17px;
+    border-bottom-right-radius: 17px;
+    transition: color 0.3s ease, background-color 0.5s ease;
+    padding:1rem;
 }
-footer .contact-number {
-    color:darkblue;
-    font-size: 17px;
-    font-weight: 500;
-    margin-top: 0.25rem;
-}
-footer a {
-    text-decoration: none;
-    font-size: 22px;
-    font-weight: 500;
+#submitChecklistBtn:hover {
+    background-color: #3fae48;
     color:white;
-    opacity: 0.7;
-    transition: transform 0.3s ease, opacity 0.5s linear;
-}
-footer a:hover {
-    transform: scale(1.1);
-    opacity:1;
-}
-footer a:hover .fa-clipboard {
-    animation: hoverEffect 0.5s ease;
-}
-@keyframes hoverEffect {
-    from {
-        transform: scale(1.0);
-        transform: translateY(0);
-    } to {
-        transform: scale(1.1);
-        transform: translateY(-1rem);
-    }
 }
