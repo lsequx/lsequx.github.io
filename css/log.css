@@ -1,0 +1,89 @@
+main {
+    overflow-y: auto;
+    height: 400px;
+    width:90%;
+}
+main::-webkit-scrollbar {
+    display: none;
+}
+main thead th {
+    position: sticky;
+    top:0;
+}
+table {
+    border-collapse: collapse;
+    margin-top: 1rem;
+    width: 100%;
+}
+table thead tr th {
+    background-color: green;
+    padding:1rem;
+    color:white;
+    letter-spacing: 0.5px;
+    font-weight: 800;
+    font-size: 20px;
+}
+#tableData tr td {
+    padding:1rem;
+    color:darkslategray;
+    font-weight: 600;
+    font-size: 17px;
+    letter-spacing: 0.5px;
+    text-align: center;
+}
+#tableData tr:not(:last-child) {
+    border-bottom: 1px solid lightgray;
+}
+#tableData tr:nth-child(even){
+    background-color: lightgray;
+}
+#tableData tr:nth-child(odd) {
+    background-color: darkgray;
+}
+#tableData tr td a.checklist-view-link {
+    text-decoration: none;
+    color:seagreen;
+    transition: color 0.3s ease;
+}
+#tableData tr td a.checklist-view-link:hover {
+    color: green;
+}
+#tableData tr td a.disabled {
+    color:lightgray;
+    pointer-events: none;
+}
+
+#filter-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    min-height: 10vh;
+    gap:12rem;
+    position:relative;
+}
+#searchInput {
+    padding:5px;
+    font-size: 20px;
+    outline: none;
+    border:1px solid lightgray;
+    border-radius: 5px;
+    color:#3fae48;
+}
+#actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:2rem;
+}
+#actions a {
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 17px;
+    color:gray;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+#actions a:hover {
+    color:darkgray;
+    transform: scale(1.1);
+}

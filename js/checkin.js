@@ -13,7 +13,10 @@ $(function() {
             checkedIn = false;
         } else if (name.length < 3 || name.length > 17) {
             errorMessage.text('* name must be between 3-17 characters')
-        } else {
+        } else if ( isNan(name)) {
+            errorMessage.text('* name cannot contain numbers');
+        } 
+        else {
             errorMessage.hide();
             checkedIn = true;
         }
