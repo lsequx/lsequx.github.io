@@ -1,5 +1,5 @@
 $(function() {
-    
+
     var checklist = $('#checklistContainer');
     checklist.hide();
 
@@ -8,6 +8,7 @@ $(function() {
         var errorMessage = $('#error');
         var checkedIn = false;
         var timeDisplay = $("#time");
+        var dateDisplay = $('#dateDisplay');
 
         if(name === "") {
             errorMessage.show();
@@ -25,6 +26,7 @@ $(function() {
                 $('#checkInBtn').text('Check Out');
                 checklist.slideDown(800);
                 timeDisplay.text(new Date().toLocaleTimeString());
+                dateDisplay.text(new Date().toLocaleDateString());
                 $('#nameInput').css({
                     'pointer-events':'none',
                     'font-weight':'800',

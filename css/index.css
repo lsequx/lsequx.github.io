@@ -79,7 +79,7 @@ main {
     border-top-left-radius: 17px;
     border-bottom: 5px solid white;
 }
-#time {
+#time, #dateDisplay {
     color:lightgray;
 }
 #checklist-title {
@@ -189,6 +189,7 @@ main {
 }
 #sendFormContainer label {
     font-size: 1.25rem;
+    color:gray;
 }
 #sendFormContainer input {
     width:25px;
