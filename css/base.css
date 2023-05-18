@@ -42,6 +42,7 @@ footer {
 .contact-name {
     color:white;
     letter-spacing: 0.75px;
+    font-size: 27px;
     font-weight: 700;
     opacity: 0.8;
 }
