@@ -1,6 +1,8 @@
 $(function() {
+    
     var checklist = $('#checklistContainer');
     checklist.hide();
+
     $('#checkInBtn').click(function() {
         var name = $('#nameInput').val();
         var errorMessage = $('#error');
