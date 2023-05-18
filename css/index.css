@@ -13,7 +13,7 @@ main {
     justify-content: center;
     align-items: center;
     padding:1rem;
-    background-image:linear-gradient(150deg, #3fae48, #157145);
+    background-image:linear-gradient(11deg, #3fae48, seagreen);
     box-shadow: inset 0 0 11px black;
     border-radius: 17px;
     gap:0.5rem;
