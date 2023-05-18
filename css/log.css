@@ -80,7 +80,7 @@ table thead tr th {
 #actions a {
     text-decoration: none;
     font-weight: 500;
-    font-size: 17px;
+    font-size: 24px;
     color:gray;
     transition: transform 0.3s ease, color 0.3s ease;
 }
