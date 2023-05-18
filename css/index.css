@@ -182,3 +182,16 @@ main {
     background-color: #3fae48;
     color:white;
 }
+#sendFormContainer {
+    display: flex;
+    gap:0.25rem;
+    margin-top: 1rem;
+}
+#sendFormContainer label {
+    font-size: 1.25rem;
+}
+#sendFormContainer input {
+    width:25px;
+    height:25px;
+    border:none;
+}
