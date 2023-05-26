@@ -4,127 +4,128 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./images/tab-icon.png" type="image/x-icon">
     <title>H5 Security</title>
-    <link rel="shortcut icon" href="https://h5datacenters.com/android-icon-192x192.png" type="image/x-icon">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/index.css">
     <script src="https://kit.fontawesome.com/998241e7ce.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/index.css">
     <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
-    <script src="js/checkin.js" defer></script>
-    <script src="js/checklist.js" defer></script>
+    <script src="./js/index.js" defer></script>
 </head>
 <body>
     <header>
-        <h1 id="title"><span id="h5">H5</span>DATACENTERS</h1>
+        <img src="./images/h5-symbol.png" alt="h5-logo" id="h5-symbol">
+        <div id="title-container">
+            <h1><span id="h5">H5</span>DATACENTERS</h1>
+            <div id="contacts-container">
+                <div class="contact">
+                    <h3 class="contact-name">Walter Stietzel</h3>
+                    <h3 class="contact-number">(513) 869-0520</h3>
+                </div>
+                <div class="contact">
+                    <h3 class="contact-name">Brandon Maley</h3>
+                    <h3 class="contact-number">(513) 967-3812</h3>
+                </div>
+            </div>
+        </div>
     </header>
-    <div id="checkInContainer">
-        <div id="checkin">
-            <input type="text" id="nameInput" placeholder="Enter name" autofocus autocomplete="off" />
-            <button id="checkInBtn">Check In</button>
-        </div>
-        <p id="error"></p>
-    </div>
     <main>
-        <div id="checklistContainer">
-            <div id="messageContainer">
-                <h2 id="checklist-title">Routine Checklist</h2>
-                <h3 id="dateDisplay">date</h3>
-                <h3 id="time">12:12AM</h3>
-            </div>
-            <form action="#checklistSubmit" id="checklistForm" method="get">
-                <div class="item">
-                    <span class="label-input">
-                        <label for="checkbox">Lobby</label>
-                        <span class="user-actions">
-                            <input type="checkbox" name="checkbox" class="checkbox" value="lobby">
-                            <button type="button" class="detailsBtn"><i class="fa-solid fa-pencil"></i></button>
-                        </span>
-                    </span>
-                    <textarea class="detailsBox" placeholder="Additional notes"></textarea>
+        <div id="checkin-container">
+            <h1 id="checkin-title">Security Check-In</h1>
+            <form action="#" id="checkin-form">
+                <div id="error"><!-- show error here --></div>
+                <div class="checkin-elements">
+                    <h2 id="confirmation-text">CHECKED IN</h2>
+                    <input type="text" placeholder="Enter name" id="checkin-name">
+                    <button id="checkin-btn"><i class="fas fa-check"></i></button>
                 </div>
-                <div class="item">
-                    <span class="label-input">
-                        <label for="checkbox">Office</label>
-                        <span class="user-actions">
-                            <input type="checkbox" name="checkbox" class="checkbox" value="'area name">
-                            <button type="button" class="detailsBtn"><i class="fa-solid fa-pencil"></i></button>
-                        </span>
-                    </span>
-                    <textarea class="detailsBox" placeholder="Additional notes"></textarea>
-                </div>
-                <div class="item">
-                    <span class="label-input">
-                        <label for="checkbox">Gen 1<sup>st</sup> floor</label>
-                        <span class="user-actions">
-                            <input type="checkbox" name="checkbox" class="checkbox" value="'area name">
-                            <button type="button" class="detailsBtn"><i class="fa-solid fa-pencil"></i></button>
-                        </span>
-                    </span>
-                    <textarea class="detailsBox" placeholder="Additional notes"></textarea>
-                </div>
-                <div class="item">
-                    <span class="label-input">
-                        <label for="checkbox">Gen 2<sup>nd</sup> floor</label>
-                        <span class="user-actions">
-                            <input type="checkbox" name="checkbox" class="checkbox" value="'area name">
-                            <button type="button" class="detailsBtn"><i class="fa-solid fa-pencil"></i></button>
-                        </span>
-                    </span>
-                    <textarea class="detailsBox" placeholder="Additional notes"></textarea>
-                </div>
-                <div class="item">
-                    <span class="label-input">
-                        <label for="checkbox">Dock</label>
-                        <span class="user-actions">
-                            <input type="checkbox" name="checkbox" class="checkbox" value="'area name">
-                            <button type="button" class="detailsBtn"><i class="fa-solid fa-pencil"></i></button>
-                        </span>
-                    </span>
-                    <textarea class="detailsBox" placeholder="Additional notes"></textarea>
-                </div>
-                <div class="item">
-                    <span class="label-input">
-                        <label for="checkbox">Dock</label>
-                        <span class="user-actions">
-                            <input type="checkbox" name="checkbox" class="checkbox" value="'area name">
-                            <button type="button" class="detailsBtn"><i class="fa-solid fa-pencil"></i></button>
-                        </span>
-                    </span>
-                    <textarea class="detailsBox" placeholder="Additional notes"></textarea>
-                </div>
-                <div class="item">
-                    <span class="label-input">
-                        <label for="checkbox">Exterior</label>
-                        <span class="user-actions">
-                            <input type="checkbox" name="checkbox" class="checkbox" value="'area name">
-                            <button type="button" class="detailsBtn"><i class="fa-solid fa-pencil"></i></button>
-                        </span>
-                    </span>
-                    <textarea class="detailsBox" placeholder="Additional notes"></textarea>
-                </div>
-                <button id="submitChecklistBtn">Submit Checklist</button>
             </form>
-            <div id="sendFormContainer">
-                <input type="checkbox" name="sendFormCheckbox" id="sendFormCheckbox">
-                <label for="sendFormCheckbox"> * email checklist to Facility Manager</label>
-            </div>
         </div>
-        <footer>
-            <div class="contact">
-                <h3 class="contact-name">Walter Stietzel</h3>
-                <h4 class="contact-number">(513) 869 0520</h4>
+        <div id="checklist-container">
+            <div id="status-banner">
+                <h2 id="date">Date</h2>
+                <h2 id="time">Time</h2>
+                <h2 id="name">Name</h2>
             </div>
-            <div class="contact">
-                <h3 class="contact-name">Brandon Maley</h3>
-                <h4 class="contact-number">(513) 967 3812</h4>
-            </div>
-            <a href="pages/log.html">View Logs</a>
-        </footer>
+            <form action="#" id="checklist-form">
+                <div class="checklist-item">
+                    <div class="item-row">
+                        <label for="checkbox">Lobby</label>
+                        <div class="row-actions">
+                            <input type="checkbox">
+                            <button class="toggle-details-btn"><i class="fas fa-angle-down"></i></button>
+                        </div>
+                    </div>
+                    <textarea class="details-box" placeholder="additional notes"></textarea>
+                </div>
+                <div class="checklist-item">
+                    <div class="item-row">
+                        <label for="checkbox">Office</label>
+                        <div class="row-actions">
+                            <input type="checkbox">
+                            <button class="toggle-details-btn"><i class="fas fa-angle-down"></i></button>
+                        </div>
+                    </div>
+                    <textarea class="details-box" placeholder="additional notes"></textarea>
+                </div>
+                <div class="checklist-item">
+                    <div class="item-row">
+                        <label for="checkbox">Chiller Plant</label>
+                        <div class="row-actions">
+                            <input type="checkbox">
+                            <button class="toggle-details-btn"><i class="fas fa-angle-down"></i></button>
+                        </div>
+                    </div>
+                    <textarea class="details-box" placeholder="additional notes"></textarea>
+                </div>
+                <div class="checklist-item">
+                    <div class="item-row">
+                        <label for="checkbox">Gen 1<sup>st</sup> Floor</label>
+                        <div class="row-actions">
+                            <input type="checkbox">
+                            <button class="toggle-details-btn"><i class="fas fa-angle-down"></i></button>
+                        </div>
+                    </div>
+                    <textarea class="details-box" placeholder="additional notes"></textarea>
+                </div>
+                <div class="checklist-item">
+                    <div class="item-row">
+                        <label for="checkbox">Gen 2<sup>nd</sup> Floor</label>
+                        <div class="row-actions">
+                            <input type="checkbox">
+                            <button class="toggle-details-btn"><i class="fas fa-angle-down"></i></button>
+                        </div>
+                    </div>
+                    <textarea class="details-box" placeholder="additional notes"></textarea>
+                </div>
+                <div class="checklist-item">
+                    <div class="item-row">
+                        <label for="checkbox">Dock</label>
+                        <div class="row-actions">
+                            <input type="checkbox">
+                            <button class="toggle-details-btn"><i class="fas fa-angle-down"></i></button>
+                        </div>
+                    </div>
+                    <textarea class="details-box" placeholder="additional notes"></textarea>
+                </div>
+                <div class="checklist-item">
+                    <div class="item-row">
+                        <label for="checkbox">Exterior</label>
+                        <div class="row-actions">
+                            <input type="checkbox">
+                            <button class="toggle-details-btn"><i class="fas fa-angle-down"></i></button>
+                        </div>
+                    </div>
+                    <textarea class="details-box" placeholder="additional notes"></textarea>
+                </div>
+                <div id="email-content">
+                    <input type="checkbox" name="emailChecklist">
+                    <label for="emailChecklist">* email checklist to facility manager</label>
+                </div>
+                <button id="checklist-btn">Submit Checklist</button>
+            </form>
+        </div>
     </main>
-
 
 </body>
 </html>
