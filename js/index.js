@@ -25,8 +25,8 @@ $(function () {
         $('#time').text(new Date().toLocaleTimeString());
         $('#name').text(name);
         $('#checklistContainer').slideDown('slow');
-        $(this).hide(800);
         $('#checkIn-title').text('Checked In')
+        $('#checkInContainer').hide();
     })
 
     $(document).on('change', '.checkbox', function() {
