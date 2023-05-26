@@ -151,7 +151,7 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    display: none;
+    /* display: none; */
     margin-top: 0.5rem;
     width: 675px;
     position: absolute;
@@ -206,7 +206,7 @@ main {
     padding: 14px;
 }
 .item-row label {
-    font-size: 24px;
+    font-size: 22px;
     color: gray;
     letter-spacing: 0.5px;
     text-transform: uppercase;
