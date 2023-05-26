@@ -3,12 +3,15 @@
 /******* HEADER *******/
 header {
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .header {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: lightgray;
+    /* background-color: lightgray; */
 }
 .title {
     display: flex;
@@ -173,6 +176,8 @@ main {
     overflow: scroll;
     position: relative;
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 #form::-webkit-scrollbar {
     display: none;
