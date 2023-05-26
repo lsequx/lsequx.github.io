@@ -147,7 +147,7 @@ main {
     justify-content: center;
     align-items: center;
     filter: drop-shadow(-3px 7px 5px darkgray);
-    /* display: none; */
+    display: none;
     margin-top: 0.5rem;
 }
 .banner {
