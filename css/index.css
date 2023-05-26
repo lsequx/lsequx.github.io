@@ -213,6 +213,9 @@ main {
     border:none;
     color: gray;
 }
+.fa-angle-up {
+    color: red;
+}
 .details-box {
     border:1px solid gray;
     background-color: whitesmoke;

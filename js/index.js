@@ -23,6 +23,21 @@ $(function () {
         $('#checkIn-title').text('Checked In')
     })
 
+    $(document).on('change', '.checkbox', function() {
+        var label = $(this).closest('.checklist-item').find('label');
+        if ($(this).is(':checked')) {
+            label.css({
+                'text-decoration':'line-through',
+                'color':'red'
+            });
+        } else {
+            label.css({
+                'text-decoration':'none',
+                'color':'gray'
+            });
+        }
+    });
+
     $('#checklist-btn').click(function(e) {
         e.preventDefault();
         let checkboxes = $('.checkbox');
@@ -34,6 +49,7 @@ $(function () {
         // $('#checkIn-title').text('Check In');
 
         let checked = $(checkboxes).filter(":checked").toArray();
+
         if(checked.length === $('.checkbox').length) {
             location.reload();
         } else {
@@ -46,5 +62,12 @@ $(function () {
     })
     $('#cancel').click(function() {
         errorContainer.hide();
+    })
+
+    $(document).on('click', '.details-toggle-btn', function() {
+        let item = $(this).closest('.checklist-item');
+        let textarea = item.find('.details-box');
+        textarea.slideToggle();
+        $(this).find('i').toggleClass('fa-angle-down fa-angle-up');
     })
 })
