@@ -1,6 +1,8 @@
 $(function () {
 
     let checkedIn = false;
+    let errorContainer = $('#error-container');
+    errorContainer.hide();
 
     $('#checkIn-name').on('keyup', function(e) {
         e.preventDefault();
@@ -24,17 +26,25 @@ $(function () {
     $('#checklist-btn').click(function(e) {
         e.preventDefault();
         let checkboxes = $('.checkbox');
-        let checked = [];
         let detailsBtns = $('.toggle-details-btn');
         let detailBoxes = $('.details-box');
 
-        $('#checklistContainer').slideUp(800);
-        $('#checkIn-name').val('');
-        $('#checkIn-title').text('Check In');
+        // $('#checklistContainer').slideUp(800);
+        // $('#checkIn-name').val('');
+        // $('#checkIn-title').text('Check In');
 
-        checkboxes.each(checkbox () => {
-            console.log(checkbox);
-        })
+        let checked = $(checkboxes).filter(":checked").toArray();
+        if(checked.length === $('.checkbox').length) {
+            location.reload();
+        } else {
+            $('#error-container').show();
+        }
     })
 
+    $('#confirm').click(function() {
+        location.reload();
+    })
+    $('#cancel').click(function() {
+        errorContainer.hide();
+    })
 })

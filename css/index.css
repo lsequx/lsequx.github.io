@@ -140,8 +140,6 @@ main {
 
 /******* CHECKLIST *******/
 #checklistContainer {
-    /* position: absolute; */
-    /* width: 600px; */
     background-image: linear-gradient(360deg, silver,lightgray);
     border-radius: 12px;
     display: flex;
@@ -150,7 +148,6 @@ main {
     align-items: center;
     filter: drop-shadow(-3px 7px 5px darkgray);
     display: none;
-    /* opacity: 0.1; */
     margin-top: 0.5rem;
 }
 .banner {
@@ -168,6 +165,7 @@ main {
 #form {
     height: 400px;
     overflow: scroll;
+    position: relative;
 }
 #form::-webkit-scrollbar {
     display: none;
@@ -252,4 +250,44 @@ main {
     color: white;
     box-shadow: -2px 3px 5px darkslategray;
     margin-top: 0.75rem;
+}
+
+
+#error-container {
+    width:350px;
+    height: 150px;
+    background-image: linear-gradient(360deg,rgba(0, 0, 0, 0.9),darkslategray,rgb(156, 156, 156));
+    position: absolute;
+    top: 125px;
+    left:125px;
+    border-radius: 7px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#error-content {
+    width: 100%;
+    text-align: center;
+    color: white;
+    opacity: 0.8;
+}
+#buttons button {
+    width:150px;
+    height: 35px;
+    margin-top: 1rem;
+    border-radius: 3px;
+    border:none;
+    font-size: 17px;
+    color: white;
+    transition: transform 0.3s ease;
+}
+button#confirm {
+    background-color: #3fae48;
+}
+button#cancel {
+    background-color: red;
+}
+#buttons button:hover {
+    transform: translateY(-3px);
 }
