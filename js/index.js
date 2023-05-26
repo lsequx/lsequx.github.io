@@ -18,6 +18,12 @@ $(function () {
     $('#checkIn-btn').click(function(e) {
         e.preventDefault();
         checkedIn = true;
+        let name = $('#checkIn-name').val();
+        let banner = $('.banner')
+
+        $('#date').text(new Date().toLocaleDateString());
+        $('#time').text(new Date().toLocaleTimeString());
+        $('#name').text(name);
         $('#checklistContainer').slideDown('slow');
         $(this).hide(800);
         $('#checkIn-title').text('Checked In')
