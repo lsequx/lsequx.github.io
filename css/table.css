@@ -1,0 +1,61 @@
+body {
+    padding:1rem;
+}
+#filter-container {
+    padding-bottom: 1rem;
+}
+#filterInput {
+    width:300px;
+    height: 50px;
+    padding: 7px;
+    font-size: 20px;
+    color: gray;
+    border:1px solid lightgray;
+    border-radius: 5px;
+    outline: none;
+}
+.links {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin-top: 0.5rem;
+}
+.links a {
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 600;
+    color: #3fae48;
+}
+table {
+    border-collapse: collapse;
+    border:1px solid lightgray;
+    width: 50%;
+    text-align: center;
+}
+table thead {
+    background-color: green;
+}
+table thead tr,th {
+    padding:1rem;
+    font-size: 24px;
+    color: white;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+table tbody tr,td {
+    padding:1rem;
+    color:darkslategray;
+    font-weight: 600;
+}
+table tbody tr:nth-child(even) {
+    background-color: lightgray;
+}
+.view-check {
+    text-decoration: none;
+    color: #3fae48;
+    transition: color 0.3s ease;
+}
+.view-check:hover {
+    color: green;
+}
