@@ -13,119 +13,124 @@
     <script src="./js/index.js" defer></script>
 </head>
 <body>
+
+    <!-- Walter Stietzel (513) 869-0520 /Brandon Maley (513) 967-3812 -->
+    <!-- Lobby, Office, Chiller Plant, Gen 1st, Gen 2nd, Dock, Exterior-->
+
     <header>
-        <img src="./images/h5-symbol.png" alt="h5-logo" id="h5-symbol">
-        <div id="title-container">
-            <h1><span id="h5">H5</span>DATACENTERS</h1>
-            <div id="contacts-container">
-                <div class="contact">
-                    <h3 class="contact-name">Walter Stietzel</h3>
-                    <h3 class="contact-number">(513) 869-0520</h3>
-                </div>
-                <div class="contact">
-                    <h3 class="contact-name">Brandon Maley</h3>
-                    <h3 class="contact-number">(513) 967-3812</h3>
+        <div class="header">
+            <img src="./images/h5-symbol.png" alt="H5 Sybmol" width="175">
+            <div class="title">
+                <h1><span id="h5">H5</span>DATACENTERS</h1>
+                <div class="contactsContainer">
+                    <div class="contact">
+                        <h3 class="contact-name">Walter Stietzel</h3>
+                        <h4 class="contact-number">(513) 869-0520</h4>
+                    </div>
+                    <div class="contact">
+                        <h3 class="contact-name">Brandon Maley</h3>
+                        <h4 class="contact-number">(513) 967-3812</h4>
+                    </div>
+                    <a href="#" id="logViewLink">View Logs</a>
                 </div>
             </div>
         </div>
     </header>
     <main>
-        <div id="checkin-container">
-            <h1 id="checkin-title">Security Check-In</h1>
-            <form action="#" id="checkin-form">
-                <div id="error"><!-- show error here --></div>
-                <div class="checkin-elements">
-                    <h2 id="confirmation-text">CHECKED IN</h2>
-                    <input type="text" placeholder="Enter name" id="checkin-name">
-                    <button id="checkin-btn"><i class="fas fa-check"></i></button>
-                </div>
+        <div id="checkInContainer">
+            <h1 id="checkIn-title">Check In</h1>
+            <form action="#" id="checkIn-form">
+                <input type="text" name="checkIn-name" id="checkIn-name" placeholder="Enter Name" autofocus>
+                <button id="checkIn-btn">Start Check</button>
             </form>
+            <div id="error">error text</div>
         </div>
-        <div id="checklist-container">
-            <div id="status-banner">
-                <h2 id="date">Date</h2>
-                <h2 id="time">Time</h2>
-                <h2 id="name">Name</h2>
+        <div id="checklistContainer">
+            <div class="banner">
+                <h3 id="date">date</h3>
+                <h3 id="name">name</h3>
+                <h3 id="time">time</h3>
             </div>
-            <form action="#" id="checklist-form">
-                <div class="checklist-item">
-                    <div class="item-row">
-                        <label for="checkbox">Lobby</label>
-                        <div class="row-actions">
-                            <input type="checkbox">
-                            <button class="toggle-details-btn"><i class="fas fa-angle-down"></i></button>
+            <div id="form">
+                <form action="#" id="checklist-form">
+                    <div class="checklist-item">
+                        <div class="item-row">
+                            <label for="checkbox">Lobby</label>
+                            <div class="row-actions">
+                                <input type="checkbox" name="checkbox" class="checkbox">
+                                <button type="button" class="details-toggle-btn"><i class="fas fa-angle-down"></i></button>
+                            </div>
                         </div>
+                        <textarea class="details-box" placeholder="additional notes..."></textarea>
                     </div>
-                    <textarea class="details-box" placeholder="additional notes"></textarea>
-                </div>
-                <div class="checklist-item">
-                    <div class="item-row">
-                        <label for="checkbox">Office</label>
-                        <div class="row-actions">
-                            <input type="checkbox">
-                            <button class="toggle-details-btn"><i class="fas fa-angle-down"></i></button>
+                    <div class="checklist-item">
+                        <div class="item-row">
+                            <label for="checkbox">Office</label>
+                            <div class="row-actions">
+                                <input type="checkbox" name="checkbox" class="checkbox">
+                                <button type="button" class="details-toggle-btn"><i class="fas fa-angle-down"></i></button>
+                            </div>
                         </div>
+                        <textarea class="details-box" placeholder="additional notes..."></textarea>
                     </div>
-                    <textarea class="details-box" placeholder="additional notes"></textarea>
-                </div>
-                <div class="checklist-item">
-                    <div class="item-row">
-                        <label for="checkbox">Chiller Plant</label>
-                        <div class="row-actions">
-                            <input type="checkbox">
-                            <button class="toggle-details-btn"><i class="fas fa-angle-down"></i></button>
+                    <div class="checklist-item">
+                        <div class="item-row">
+                            <label for="checkbox">Chiller Plant</label>
+                            <div class="row-actions">
+                                <input type="checkbox" name="checkbox" class="checkbox">
+                                <button type="button" class="details-toggle-btn"><i class="fas fa-angle-down"></i></button>
+                            </div>
                         </div>
+                        <textarea class="details-box" placeholder="additional notes..."></textarea>
                     </div>
-                    <textarea class="details-box" placeholder="additional notes"></textarea>
-                </div>
-                <div class="checklist-item">
-                    <div class="item-row">
-                        <label for="checkbox">Gen 1<sup>st</sup> Floor</label>
-                        <div class="row-actions">
-                            <input type="checkbox">
-                            <button class="toggle-details-btn"><i class="fas fa-angle-down"></i></button>
+                    <div class="checklist-item">
+                        <div class="item-row">
+                            <label for="checkbox">Gen 1<sup>st</sup> Floor</label>
+                            <div class="row-actions">
+                                <input type="checkbox" name="checkbox" class="checkbox">
+                                <button type="button" class="details-toggle-btn"><i class="fas fa-angle-down"></i></button>
+                            </div>
                         </div>
+                        <textarea class="details-box" placeholder="additional notes..."></textarea>
                     </div>
-                    <textarea class="details-box" placeholder="additional notes"></textarea>
-                </div>
-                <div class="checklist-item">
-                    <div class="item-row">
-                        <label for="checkbox">Gen 2<sup>nd</sup> Floor</label>
-                        <div class="row-actions">
-                            <input type="checkbox">
-                            <button class="toggle-details-btn"><i class="fas fa-angle-down"></i></button>
+                    <div class="checklist-item">
+                        <div class="item-row">
+                            <label for="checkbox">Gen 2<sup>nd</sup> Floor</label>
+                            <div class="row-actions">
+                                <input type="checkbox" name="checkbox" class="checkbox">
+                                <button type="button" class="details-toggle-btn"><i class="fas fa-angle-down"></i></button>
+                            </div>
                         </div>
+                        <textarea class="details-box" placeholder="additional notes..."></textarea>
                     </div>
-                    <textarea class="details-box" placeholder="additional notes"></textarea>
-                </div>
-                <div class="checklist-item">
-                    <div class="item-row">
-                        <label for="checkbox">Dock</label>
-                        <div class="row-actions">
-                            <input type="checkbox">
-                            <button class="toggle-details-btn"><i class="fas fa-angle-down"></i></button>
+                    <div class="checklist-item">
+                        <div class="item-row">
+                            <label for="checkbox">Exterior</label>
+                            <div class="row-actions">
+                                <input type="checkbox" name="checkbox" class="checkbox">
+                                <button type="button" class="details-toggle-btn"><i class="fas fa-angle-down"></i></button>
+                            </div>
                         </div>
+                        <textarea class="details-box" placeholder="additional notes..."></textarea>
                     </div>
-                    <textarea class="details-box" placeholder="additional notes"></textarea>
-                </div>
-                <div class="checklist-item">
-                    <div class="item-row">
-                        <label for="checkbox">Exterior</label>
-                        <div class="row-actions">
-                            <input type="checkbox">
-                            <button class="toggle-details-btn"><i class="fas fa-angle-down"></i></button>
+                    <div class="checklist-item">
+                        <div class="item-row">
+                            <label for="checkbox">DOCK</label>
+                            <div class="row-actions">
+                                <input type="checkbox" name="checkbox" class="checkbox">
+                                <button type="button" class="details-toggle-btn"><i class="fas fa-angle-down"></i></button>
+                            </div>
                         </div>
+                        <textarea class="details-box" placeholder="additional notes..."></textarea>
                     </div>
-                    <textarea class="details-box" placeholder="additional notes"></textarea>
-                </div>
-                <div id="email-content">
-                    <input type="checkbox" name="emailChecklist">
-                    <label for="emailChecklist">* email checklist to facility manager</label>
-                </div>
-                <button id="checklist-btn">Submit Checklist</button>
-            </form>
+                    <div id="emailContent">
+                        <input type="checkbox" name="emailContent">
+                        <label for="emailContent">* email checklist to facility manager</label>
+                    </div>
+                    <button id="checklist-btn">Submit Checklist</button>
+                </form>
+            </div>
         </div>
     </main>
-
 </body>
 </html>

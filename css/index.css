@@ -1,274 +1,255 @@
-body {
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap:1rem;
-}
-/***********************************************/
-/******** header styles *************************/
-/***********************************************/
-header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    background-color: #3fae48;
-}
-#title-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-#title-container h1 {
-    font-size: 4rem;
-    color: darkslategray;
-    font-weight: 800;
-}
-#title-container #h5 {
-    font-weight: 400;
-    color:white;
-}
-#contacts-container {
-    width: 100%;
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    gap:2rem;
-}
-.contact-name {
-    font-size: 24px;
-    color: white;
-    font-weight: 400;
-    font-style: italic;
-    letter-spacing: 1px;
-}
-.contact-number {
-    color:lightgray;
-    font-weight: 400;
-    font-size: 17px;
-    letter-spacing: 0.5px;
-}
-/***********************************************/
-/******** check in styles *************************/
-/***********************************************/
-#checkin-container {
-    width:750px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-image: linear-gradient(-175deg,seagreen,green);
-    /* backdrop-filter: blur(25px); */
-    padding:1rem;
-    border-radius: 14px;
-    box-shadow: 0 5px 5px darkslategray;
-    position: relative;
-}
-#checkin-container h1 {
-    font-size: 45px;
-    font-weight: 400;
-    color: white;
-    opacity: 0.7;
-    margin-bottom: 1.5rem;
-    border-bottom: 2px solid darkgreen;
-    width: 75%;
-    text-align: center;
-    padding-bottom: 1rem;
-}
-#checkin-form {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    gap:0.25rem;
-    padding:1rem;
-}
-#error {
-    color:orange;
-    font-weight: 600;
-    position: absolute;
-    bottom:0.35rem;
-    /* display: none; */
-}
-.checkin-elements {
-    background-image:linear-gradient(125deg, darkgreen, seagreen);
-    border-radius: 17px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100px;
-    filter: drop-shadow(0 0 5px green);
-    box-shadow: 0 0 5px darkgreen inset, -3px 7px 7px darkgreen;
-    position: relative;
-    padding:1rem;
-    min-width:300px;
-}
-#confirmation-text {
-    font-size: 40px;
-    font-weight: 800;
-    letter-spacing: 1px;
-    color: lightgreen;
-    text-shadow: 0 7px 3px black;
-    display: none;
-}
-#checkin-name {
-    width: 350px;
-    padding:17px;
-    height: 75px;
-    font-size: 35px;
-    background-color: transparent;
-    border-radius: 5px;
-    border: none;
-    color:white;
-    outline: none;
-    text-align: left;
-    /* display: none; */
-    animation: fade 7s ease forwards;
-}
-@keyframes fade {
-    from {opacity: 0;}
-    to {opacity: 1;}
-}
-#checkin-name::placeholder {
-    color: white;
-    opacity: 0.7;
-}
-#checkin-btn {
-    width: 100px;
-    height: 100px;
-    border-radius: 17px;
-    border:none;
-    filter: drop-shadow(0 0 3px green);
-    box-shadow: 0 0 3px darkgreen inset, 3px 3px 3px darkgreen;
-    font-size: 50px;
-    background-color: seagreen;
-    color:white;
-    position: absolute;
-    left: 0;
-    animation: startMove 1.5s ease forwards;
-    transition: background-color 0.3s ease;
-}
-@keyframes startMove {
-    from{transform: translateX(0);opacity: 0;}
-    to{transform: translateX(280px);opacity: 1;}
-}
 
-.fa-check {
-    text-shadow: 0 5px 7px darkslategray;
-}
-#checkin-btn:hover {
-    background-color: green;
-}
-/***********************************************/
-/******** checklist styles *************************/
-/***********************************************/
-#checklist-container {
-    text-align: center;
-    width:750px;
-    background-image: linear-gradient(145deg,seagreen,darkgreen);
-    border-radius: 14px;
-    margin-top: 0.5rem;
-    box-shadow: 0 7px 5px darkslategray;
-    display: none;
-}
-#status-banner {
-    display: flex;
+
+/******* HEADER *******/
+header {
     width: 100%;
+}
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightgray;
+}
+.title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.title h1 {
+    font-size: 4rem;
+    color: #3fae48;
+    font-weight: 800;
+}
+.title #h5 {
+    color: darkslategray;
+    font-weight: 400;
+}
+.contactsContainer {
+    width: 100%;
+    display: flex;
     justify-content: space-between;
     align-items: center;
+}
+.contact-name {
+    color:gray;
+    letter-spacing: 0.5px;
+}
+.contact-number {
+    color: darkslategray;
+    font-weight: 400;
+}
+#logViewLink{
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+    background-color: #3fae48;
     color: white;
-    padding:1rem;
-}
-#checklist-form {
-    width:100%;
-    height: 450px;
-    overflow-y: scroll;
-    border-top: 3px solid white;
+    border:1px solid #3fae48;
     padding:0.5rem;
+    border-radius: 5px;
+    box-shadow: -2px 2px 7px darkslategray;
 }
-#checklist-form::-webkit-scrollbar {
-    display: none;
-}
-.checklist-item {
-    width:100%;
+
+/******* MAIN *******/
+main {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* padding:0.25rem; */
+    align-items: center;
+    position: relative;
+    padding:1rem;
+}
+
+/******* CHECK IN *******/
+#checkInContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-image: linear-gradient(245deg,seagreen,green, seagreen);
+    width: 600px;
+    padding:1.5rem;
+    box-shadow: 0 5px 5px gray;
+    border-radius: 12px;
+}
+#checkIn-title {
+    color: lightgreen;
+    filter: drop-shadow(0 7px 3px darkgreen);
+    font-weight: 800;
+    font-size: 3rem;
+    padding-bottom: 1rem;
+    letter-spacing: 1px;
+}
+#checkIn-form {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:0.25rem;
+    border-radius: 5px;
+}
+#checkIn-name {
+    width: 100%;
+    height: 75px;
+    padding:7px;
+    font-size: 24px;
+    outline: none;
+    color: lightgreen;
+    border: 2px solid #3fae48;
+    background-color: transparent;
+    border-radius: 5px;
+}
+#checkIn-name:focus {
+    box-shadow: 0 5px 5px darkgreen;
+    filter: drop-shadow(-3px 3px 5px darkgreen);
+}
+#checkIn-name::placeholder {
+    color: #3fae48;
+}
+#checkIn-btn {
+    width: 100%;
+    height: 75px;
+    border:none;
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: white;
+    background-color:darkolivegreen;
+    border-radius: 5px;
+    display: none;
+    box-shadow: 0 5px 5px darkgreen;
+    filter: drop-shadow(-3px 3px 5px darkgreen);
+    transition: background-color 0.5s ease;
+}
+#checkIn-btn:hover {
+    background-color: #3fae48;
+}
+#error {
+    position: absolute;
+    left: 6.25rem;
+    bottom: 0.25rem;
+    color: white;
+    font-weight: 600;
+    font-size: 17px;
+    letter-spacing: 0.5px;
+    display: none;
+}
+
+/******* CHECKLIST *******/
+#checklistContainer {
+    /* position: absolute; */
+    /* width: 600px; */
+    background-image: linear-gradient(360deg, silver,lightgray);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    filter: drop-shadow(-3px 7px 5px darkgray);
+    display: none;
+    /* opacity: 0.1; */
+    margin-top: 0.5rem;
+}
+.banner {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:1rem;
+    color: white;
+    text-transform: capitalize;
+    background-image: linear-gradient(175deg, seagreen,darkgreen);
+    border-top-right-radius: 12px;
+    border-top-left-radius: 12px;
+}
+#form {
+    height: 400px;
+    overflow: scroll;
+}
+#form::-webkit-scrollbar {
+    display: none;
+}
+#checklist-form {
+    width: 600px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding:0.5rem;
+}
+.checklist-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
 }
 .item-row {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding:0.25rem;
+    margin-bottom: 0.25rem;
 }
 .item-row label {
     font-size: 24px;
     font-weight: 600;
-    color: lightgray;
+    color: gray;
+    letter-spacing: 0.5px;
     text-transform: uppercase;
 }
 .row-actions {
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     gap:1rem;
 }
-.row-actions input,button {
-    width:35px;
+.row-actions .checkbox,.details-toggle-btn {
+    width: 35px;
     height: 35px;
 }
-.row-actions button {
-    font-size: 27px;
-    color: lightgray;
-    border: none;
+.row-actions .details-toggle-btn {
+    font-size: 30px;
     background-color: transparent;
+    border:none;
+    color: gray;
 }
 .details-box {
-    border:none;
-    padding:5px;
+    border:1px solid gray;
+    background-color: whitesmoke;
     resize: none;
-    height: 75px;
+    padding: 5px;
     outline: none;
-    border-radius: 5px;
     color: gray;
-    margin-top: 0.25rem;
+    font-size: 14px;
+    height:75px;
+    border-radius: 3px;
     display: none;
+    margin-bottom: 0.5rem;
 }
-#email-content {
-    width:100%;
-    border-top: 1px solid lightgray;
-    padding:0.75rem;
+#emailContent {
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 1rem;
+    gap:0.5rem;
 }
-#email-content input {
-    width:25px;
+#emailContent input {
+    width: 25px;
     height: 25px;
 }
-#email-content label {
-    font-size: 20px;
-    color: white;
+#emailContent label {
+    color: darkslategray;
 }
 #checklist-btn {
-    width:100%;
-    height: 80px;
-    background-color: white;
-    color: seagreen;
-    font-size: 35px;
+    width: 100%;
+    height: 75px;
+    border:none;
+    border-radius: 12px;
+    background-color: #3fae48;
+    font-size: 30px;
     font-weight: 600;
     letter-spacing: 0.5px;
-    border: none;
-    border-radius:14px;
-    transition: background-color 0.5s ease, color 0.3s ease;
-}
-#checklist-btn:hover {
-    background-color: seagreen;
-    color:white;
+    color: white;
+    box-shadow: -2px 3px 5px darkslategray;
+    margin-top: 0.75rem;
 }
