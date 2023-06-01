@@ -318,7 +318,7 @@ button#cancel {
 
 
 
-@media (max-width:400px) {
+@media (max-width:400px) and (min-width:200px) {
     header {
         padding-top: 1rem;
     }
