@@ -10,55 +10,129 @@
     <link rel="stylesheet" href="../css/table.css">
     <script src="https://kit.fontawesome.com/998241e7ce.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+    <script src="../js/filter.js" defer></script>
 </head>
 <body>
     <div id="filter-container">
-        <input type="text" name="search-filter" id="filterInput" placeholder="Filter Table">
+        <input type="text" name="search-filter" id="filterInput" placeholder="Search...">
         <div class="links">
             <a href="../index.html">Home</a>
             <a href="#">Export Table</a>
         </div>
     </div>
-    <table>
-        <thead>
-            <tr>
-                <th>Date</th>
-                <th>Name</th>
-                <th>Start Time</th>
-                <th>End Time</th>
-                <th>Checklist</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>01/01/2023</td>
-                <td>Walter</td>
-                <td>8:30AM</td>
-                <td>10:27AM</td>
-                <td><a href="#view" class="view-check">VIEW</a></td>
-            </tr>
-            <tr>
-                <td>01/02/2023</td>
-                <td>Barry</td>
-                <td>8:02AM</td>
-                <td>9:24AM</td>
-                <td><a href="#view" class="view-check">VIEW</a></td>
-            </tr>
-            <tr>
-                <td>01/02/2023</td>
-                <td>Walter</td>
-                <td>11:32AM</td>
-                <td>1:05PM</td>
-                <td><a href="#view" class="view-check">VIEW</a></td>
-            </tr>
-            <tr>
-                <td>01/03/2023</td>
-                <td>Greg</td>
-                <td>11:32AM</td>
-                <td>1:05PM</td>
-                <td><a href="#view" class="view-check">VIEW</a></td>
-            </tr>
-        </tbody>
-    </table>
+    <main>
+        <table>
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Name</th>
+                    <th>Start Time</th>
+                    <th>End Time</th>
+                    <th>Checklist</th>
+                </tr>
+            </thead>
+            <tbody id="table-data">
+                <tr>
+                    <td>01/01/2023</td>
+                    <td>Walter</td>
+                    <td>8:30AM</td>
+                    <td>10:27AM</td>
+                    <td><a href="#view" class="view-check">VIEW</a></td>
+                </tr>
+                <tr>
+                    <td>01/02/2023</td>
+                    <td>Barry</td>
+                    <td>8:02AM</td>
+                    <td>9:24AM</td>
+                    <td><a href="#view" class="view-check">VIEW</a></td>
+                </tr>
+                <tr>
+                    <td>01/02/2023</td>
+                    <td>Walter</td>
+                    <td>11:32AM</td>
+                    <td>1:05PM</td>
+                    <td><a href="#view" class="view-check">VIEW</a></td>
+                </tr>
+                <tr>
+                    <td>01/03/2023</td>
+                    <td>Greg</td>
+                    <td>11:32AM</td>
+                    <td>1:05PM</td>
+                    <td><a href="#view" class="view-check">VIEW</a></td>
+                </tr>
+                <tr>
+                    <td>01/03/2023</td>
+                    <td>Greg</td>
+                    <td>11:32AM</td>
+                    <td>1:05PM</td>
+                    <td><a href="#view" class="view-check">VIEW</a></td>
+                </tr>
+                <tr>
+                    <td>01/03/2023</td>
+                    <td>Greg</td>
+                    <td>11:32AM</td>
+                    <td>1:05PM</td>
+                    <td><a href="#view" class="view-check">VIEW</a></td>
+                </tr>
+                <tr>
+                    <td>01/03/2023</td>
+                    <td>Greg</td>
+                    <td>11:32AM</td>
+                    <td>1:05PM</td>
+                    <td><a href="#view" class="view-check">VIEW</a></td>
+                </tr>
+                <tr>
+                    <td>01/03/2023</td>
+                    <td>Greg</td>
+                    <td>11:32AM</td>
+                    <td>1:05PM</td>
+                    <td><a href="#view" class="view-check">VIEW</a></td>
+                </tr>
+                <tr>
+                    <td>01/03/2023</td>
+                    <td>Greg</td>
+                    <td>11:32AM</td>
+                    <td>1:05PM</td>
+                    <td><a href="#view" class="view-check">VIEW</a></td>
+                </tr>
+                <tr>
+                    <td>01/03/2023</td>
+                    <td>Greg</td>
+                    <td>11:32AM</td>
+                    <td>1:05PM</td>
+                    <td><a href="#view" class="view-check">VIEW</a></td>
+                </tr>
+                <tr>
+                    <td>01/03/2023</td>
+                    <td>Greg</td>
+                    <td>11:32AM</td>
+                    <td>1:05PM</td>
+                    <td><a href="#view" class="view-check">VIEW</a></td>
+                </tr>
+                <tr>
+                    <td>01/03/2023</td>
+                    <td>Greg</td>
+                    <td>11:32AM</td>
+                    <td>1:05PM</td>
+                    <td><a href="#view" class="view-check">VIEW</a></td>
+                </tr>
+                <tr>
+                    <td>01/03/2023</td>
+                    <td>Greg</td>
+                    <td>11:32AM</td>
+                    <td>1:05PM</td>
+                    <td><a href="#view" class="view-check">VIEW</a></td>
+                </tr>
+                <tr>
+                    <td>01/03/2023</td>
+                    <td>Greg</td>
+                    <td>11:32AM</td>
+                    <td>1:05PM</td>
+                    <td><a href="#view" class="view-check">VIEW</a></td>
+                </tr>
+
+            </tbody>
+        </table>
+    </main>
 </body>
 </html>

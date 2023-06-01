@@ -1,5 +1,4 @@
 
-
 /******* HEADER *******/
 header {
     width: 100%;
@@ -74,10 +73,10 @@ main {
     background-image: linear-gradient(245deg,seagreen,green, seagreen);
     width: 675px;
     padding:1.5rem;
-    box-shadow: 0 5px 5px gray;
-    border-radius: 12px;
+    border-radius: 12px; 
     position: absolute;
     top: 12rem;
+    box-shadow: -3px 5px 5px gray;
 }
 #checkIn-title {
     color: lightgreen;
